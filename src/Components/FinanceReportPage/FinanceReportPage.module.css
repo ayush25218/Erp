@@ -1,0 +1,516 @@
+/* Base Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #2d3748;
+}
+
+/* Color Variables */
+:root {
+    --color-primary: #4299e1;
+    --color-income-0: #38a169;
+    --color-income-1: #319795;
+    --color-income-2: #3182ce;
+    --color-expense-0: #e53e3e;
+    --color-expense-1: #dd6b20;
+    --color-expense-2: #d69e2e;
+}
+
+/* Header Section */
+.header {
+    margin-bottom: 2rem;
+}
+
+.headerContent {
+    text-align: center;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a365d;
+    margin-bottom: 0.5rem;
+}
+
+.headerIcon {
+    font-size: 1.75rem;
+    color: var(--color-primary);
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #718096;
+}
+
+/* Controls Section */
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    background-color: #f7fafc;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.reportTabs {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #edf2f7;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #4a5568;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tab:hover {
+    background-color: #e2e8f0;
+}
+
+.tab.active {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.tabIcon {
+    font-size: 1rem;
+}
+
+.filterControls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.timeRange select {
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 0.875rem;
+}
+
+.dateRange {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dateInput {
+    position: relative;
+}
+
+.dateIcon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #a0aec0;
+}
+
+.dateInput input {
+    padding: 0.75rem 0.75rem 0.75rem 2rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 0.875rem;
+}
+
+.filterButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #edf2f7;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #4a5568;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.filterButton:hover {
+    background-color: #e2e8f0;
+}
+
+.buttonIcon {
+    font-size: 0.875rem;
+}
+
+.exportControls {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.exportButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #4a5568;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.exportButton:hover {
+    background-color: #f7fafc;
+}
+
+/* Report Content */
+.reportContent {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Overview Report */
+.overviewGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.overviewCard {
+    background-color: #f7fafc;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.overviewCard h3 {
+    font-size: 0.875rem;
+    color: #718096;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.amount {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 0.25rem;
+}
+
+.trendUp {
+    color: #38a169;
+}
+
+.trendDown {
+    color: #e53e3e;
+}
+
+.comparison {
+    font-size: 0.75rem;
+    color: #718096;
+}
+
+.chartContainer {
+    grid-column: 1 / -1;
+    margin-top: 1rem;
+}
+
+.chartContainer h3 {
+    font-size: 1rem;
+    color: #2d3748;
+    margin-bottom: 1rem;
+}
+
+.barChart {
+    display: flex;
+    gap: 1rem;
+    height: 200px;
+    align-items: flex-end;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.barGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.barLabel {
+    font-size: 0.75rem;
+    color: #718096;
+    margin-bottom: 0.5rem;
+}
+
+.bars {
+    display: flex;
+    gap: 0.25rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.incomeBar {
+    width: 50%;
+    background-color: var(--color-income-0);
+    border-radius: 4px 4px 0 0;
+    transition: height 0.3s ease;
+}
+
+.expenseBar {
+    width: 50%;
+    background-color: var(--color-expense-0);
+    border-radius: 4px 4px 0 0;
+    transition: height 0.3s ease;
+}
+
+.chartLegend {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.legendItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    color: #4a5568;
+}
+
+.legendColor {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+}
+
+/* Income/Expense Reports */
+.incomeReport,
+.expensesReport {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.pieChartContainer {
+    padding: 1rem;
+}
+
+.pieChartContainer h3 {
+    font-size: 1rem;
+    color: #2d3748;
+    margin-bottom: 1rem;
+}
+
+.pieChart {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(
+            var(--color-income-0) 0% var(--percentage),
+            var(--color-income-1) 0 var(--percentage),
+            var(--color-income-2) 0 var(--percentage)
+    );
+    margin: 0 auto 1rem;
+    position: relative;
+}
+
+.expensesReport .pieChart {
+    background: conic-gradient(
+            var(--color-expense-0) 0% var(--percentage),
+            var(--color-expense-1) 0 var(--percentage),
+            var(--color-expense-2) 0 var(--percentage)
+    );
+}
+
+.pieSegment {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 50%);
+    transform: rotate(calc(var(--offset) * 3.6deg));
+}
+
+.pieLegend {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.pieLegend .legendItem {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 0.75rem;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 4px;
+    background-color: #f7fafc;
+}
+
+.incomeTable,
+.expensesTable {
+    padding: 1rem;
+}
+
+.incomeTable h3,
+.expensesTable h3 {
+    font-size: 1rem;
+    color: #2d3748;
+    margin-bottom: 1rem;
+}
+
+.tableHeader {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 0.75rem;
+    background-color: #f7fafc;
+    font-weight: 600;
+    color: #4a5568;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+}
+
+.tableRow {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 0.75rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.incomeAmount {
+    color: var(--color-income-0);
+    font-weight: 500;
+}
+
+.expenseAmount {
+    color: var(--color-expense-0);
+    font-weight: 500;
+}
+
+/* Summary Section */
+.summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.summaryCard {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    padding: 1.5rem;
+}
+
+.summaryCard h3 {
+    font-size: 1rem;
+    color: #2d3748;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 0.5rem;
+}
+
+.insightsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.insightsList li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f7fafc;
+}
+
+.insightIcon {
+    color: var(--color-primary);
+}
+
+.recommendationsList {
+    list-style-type: disc;
+    padding-left: 1.25rem;
+}
+
+.recommendationsList li {
+    padding: 0.25rem 0;
+    color: #4a5568;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .overviewGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .incomeReport,
+    .expensesReport {
+        grid-template-columns: 1fr;
+    }
+
+    .pieChartContainer {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem 1rem;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    .reportTabs {
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+    }
+
+    .filterControls {
+        flex-wrap: wrap;
+    }
+
+    .overviewGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .summary {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .tableHeader,
+    .tableRow {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .tableHeader div:nth-child(3),
+    .tableRow div:nth-child(3) {
+        display: none;
+    }
+}
